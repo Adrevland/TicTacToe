@@ -2,7 +2,6 @@
 #include <array>
 #include <string>
 #include <stdlib.h>
-#include <vector>
 
 //global vars
 //tried char. didn't like it, string works fine.
@@ -10,12 +9,11 @@ std::string box[] = { "1","2","3","4","5","6","7","8","9" };
 int taken[10];
 
 void clear_board() {
+	// clears box array to "default" [1-9]
 	for (int k = 0; k < _countof(box); k++)
 	{
-		// clears box array to "default" [1-9]
 		std::string pls_work = std::to_string(k+1);
 		box[k] = pls_work;
-
 	}
 	//clears taken
 	for (int j = 0; j < _countof(taken); j++)

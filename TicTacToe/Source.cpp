@@ -156,7 +156,6 @@ int best_move(bool ai_turn) {
 			{
 				chose = i;
 				best_score = score;
-				
 			}
 		}
 	}
@@ -194,14 +193,13 @@ int compare_score(int human, int ai) {
 }
 
 // using minimax algorithm, very hard to win
-void impossible() {
+void impossible()
+{
 	while (check_win() == "none")
 	{
-		
 		board();
 		choose(1);
 		system("cls");
-		
 		if (check_win() == "X")
 		{
 			std::cout << "Very well, You are a lucky player\n";
@@ -214,7 +212,7 @@ void impossible() {
 			board();
 			break;
 		}
-		// compares score of minimax algoritm, for player and ai move
+		// compares score of minimax algorithm, for player and ai move
 		int move;
 		int ai_move = best_move(true);
 		std::cout << "best ai move: " << ai_move << std::endl << std::endl;

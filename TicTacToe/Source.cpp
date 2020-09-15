@@ -110,7 +110,6 @@ int minimax(int check_number, bool ai_turn) {
 	if (ai_turn == true)
 	{
 		int best_score{ -99 };
-
 		for (int i = 0; i < 9; i++)
 		{
 			if (check_taken(i) == false)
@@ -168,8 +167,7 @@ void bot_choose(int place) {
 
 
 //draws game board
-void board() 
-{
+void board() {
 	for (int i = 0; i < _countof(box) ; i++)
 	{
 		if (i % 3 == 0)
@@ -191,8 +189,7 @@ int compare_score(int human, int ai) {
 }
 
 // using minimax algorithm, very hard to win
-void impossible()
-{
+void impossible(){
 	while (check_win() == "none")
 	{
 		board();

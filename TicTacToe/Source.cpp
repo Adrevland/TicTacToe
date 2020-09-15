@@ -3,12 +3,10 @@
 #include <string>
 #include <stdlib.h>
 #include <vector>
-//clean the code
 
 //global vars
 //tried char. didn't like it, string works fine.
 std::string box[] = { "1","2","3","4","5","6","7","8","9" };
-//std::vector <char> box_vector{ '1','2','3','4','5','6','7','8','9' };
 int taken[10];
 
 void clear_board() {
@@ -287,7 +285,6 @@ int main() {
 	{
 		std::cout << "\nhow many players want to play? [1-2]: ";
 		std::cin >> player_count;
-
 		switch (player_count)
 		{
 		case 1:
